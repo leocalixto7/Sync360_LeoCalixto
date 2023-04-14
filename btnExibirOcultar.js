@@ -1,6 +1,6 @@
 // Função Exibir/Ocultar do botão Formulário.
 var btn = document.querySelector("#esconder-mostrar");
-var ocultar = document.getElementById("teste");
+var ocultar = document.getElementById("att_info");
 var form = document.querySelector("#profileForm");
 
 btn.addEventListener("click", () => {
