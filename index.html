@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sync360</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="navegacao" id="navegacao">
+    <nav>
+        <div class="sync">
+            <h3>Sync360</h3>
+        </div>
+
+        <h6 class="d_mode">Dark Mode</h6>
+        <div class="btn_DrkMode">
+            <div class="checkbox-apple">
+                <input class="yep" id="check-apple" type="checkbox" onchange="mudarCor()">
+                <label for="check-apple"></label>
+            </div>
+        </div>
+
+    </nav>
+</div>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" id="card_img">
+                    <img src="img.png" alt="Foto de Perfil" class="card-img-top" />
+                    <div class="card-body">
+                        <span class="card-title">
+                            <h5 id="nome_user_card">Teste</h5>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card" id="card_principal">
+                    <h2>Perfil do Usuário</h2>
+                    <div class="card-body" id="card_body">
+                        <h5 class="card-title">Informações de Perfil</h5>
+                        <hr>
+                        <div></div>
+                        <p class="card-text">Nome: <span id="nome_user">--</span></p>
+                        <p class="card-text">Idade: <span id="idade_user">--</span></p>
+                        <p class="card-text">Cidade: <span id="estado_user">--</span></p>
+                        <p class="card-text">Bio: <br> <span id="bio_user"></span></p>
+                        <hr>
+                        <button class="submit" id="esconder-mostrar"> Atualizar Dados </button>
+                        <br>
+
+                        <!-- FORMULÁRIO -->
+                        <div id="profileForm">
+                            <form class="form" id="form_dark">
+                                <p class="title">Atualização</p>
+                                <p class="message">Atualize seus dados</p>
+                                <div class="flex">
+                                    <label>
+                                        <input id="form_name" required placeholder="" type="text" class="input">
+                                        <span>Nome</span>
+                                    </label>
+
+                                    <label>
+                                        <input id="form_idade" required placeholder="" type="number" class="input">
+                                        <span>Idade</span>
+                                    </label>
+                                </div>
+                                <label>
+
+                                    <span>Localização:</span>
+                                    <select id="estado" name="estado" class="input">
+                                        <option value="">Selecione seu estado</option>
+                                        <option value="Acre - AC">Acre</option>
+                                        <option value="Alagoas - AL">Alagoas</option>
+                                        <option value="AmapáAP">Amapá</option>
+                                        <option value="Amazonas - AM">Amazonas</option>
+                                        <option value="Bahia - BA">Bahia</option>
+                                        <option value="Ceará - CE">Ceará</option>
+                                        <option value="Distrito Federal - DF">Distrito Federal</option>
+                                        <option value="Espírito Santo - ES">Espírito Santo</option>
+                                        <option value="Goiás - GO">Goiás</option>
+                                        <option value="Maranhão - MA">Maranhão</option>
+                                        <option value="Mato Grosso - MT">Mato Grosso</option>
+                                        <option value="Mato Grosso do Sul - MS">Mato Grosso do Sul</option>
+                                        <option value="Mato Grosso do Sul - MG">Minas Gerais</option>
+                                        <option value="Pará - PA">Pará</option>
+                                        <option value="Paraíba - PB">Paraíba</option>
+                                        <option value="Paraná - PR">Paraná</option>
+                                        <option value="Pernambuco - PE">Pernambuco</option>
+                                        <option value="Piauí - PI">Piauí</option>
+                                        <option value="Rio de Janeiro - RJ">Rio de Janeiro</option>
+                                        <option value="Rio Grande do Norte - RN">Rio Grande do Norte</option>
+                                        <option value="Rio Grande do Sul - RS">Rio Grande do Sul</option>
+                                        <option value="Rondônia - RO">Rondônia</option>
+                                        <option value="Rondônia - RR">Roraima</option>
+                                        <option value="Santa Catarina - SC">Santa Catarina</option>
+                                        <option value="São Paulo - SP">São Paulo</option>
+                                        <option value="Sergipe - SE">Sergipe</option>
+                                        <option value="Tocantins - TO">Tocantins</option>
+                                    </select>
+                                </label>
+                                <textarea id="bio" class="input" cols="8" rows="6"></textarea>
+                            </form>
+                            <button onclick="enviar()" id="btnSubmit" class="submit">Atualizar</button><br>
+
+                        </div>
+                        <!-- Fim do formulário -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" id="footer">
+        <footer>
+            <p>Teste para a <span>Sync360.io&copy;</span> - Desenvolvido por Leonardo Calixto.</p>
+        </footer>
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="scriptForm.js"></script>
+    <script src="btnDMode.js"></script>
+</body>
+
+</html>
